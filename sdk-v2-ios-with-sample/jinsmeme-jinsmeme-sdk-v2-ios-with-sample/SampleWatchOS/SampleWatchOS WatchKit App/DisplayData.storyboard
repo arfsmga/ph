@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="15705" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hgR-vi-RiA">
+    <device id="watch38"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="15501"/>
+    </dependencies>
+    <scenes>
+        <!--DisplayData-->
+        <scene sceneID="Mrd-PG-Mff">
+            <objects>
+                <controller identifier="DisplayData" id="hgR-vi-RiA" customClass="InterfaceDataViewController" customModule="SampleWatchOS_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" id="U1Q-Js-ugi"/>
+                        <button width="1" alignment="left" title="デバイス切り替え" id="Ajr-pX-iCG">
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="changeButtonDidPush" destination="hgR-vi-RiA" id="gXg-IH-XTy"/>
+                            </connections>
+                        </button>
+                        <label alignment="left" text="受信データ" id="sab-Xq-mHV"/>
+                        <table alignment="left" id="qgv-GS-Qe7">
+                            <items>
+                                <tableRow identifier="DisplayDataRow" id="baT-0b-Qw9" customClass="DisplayDataRow" customModule="SampleWatchOS_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="37k-eq-BbU">
+                                        <items>
+                                            <label width="129" height="36" alignment="left" text="Label" id="9R8-Tk-V6N">
+                                                <fontDescription key="font" type="system" pointSize="10"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="dataLabel" destination="9R8-Tk-V6N" id="aVs-Dd-uOs"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <label alignment="left" text="累計データ受信行数" id="KMo-Q9-Gw1"/>
+                        <label alignment="left" text="0" id="ewG-B5-FTx"/>
+                        <button width="1" alignment="left" title="Subscribe" id="QdR-xf-JM6">
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="subscribeButtonDidPush" destination="hgR-vi-RiA" id="VY2-eg-gT8"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Activate" id="sav-vn-1Bu">
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="activateButtonDidPush" destination="hgR-vi-RiA" id="Cys-VU-zQ4"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Disconnect" id="0rM-O8-b7E">
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="disconnectButtonDidPush" destination="hgR-vi-RiA" id="fKJ-Zn-78N"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Enable Gyro" id="fff-Ez-CyW">
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="enableGyroButtonDidPusy" destination="hgR-vi-RiA" id="sv7-jW-08D"/>
+                            </connections>
+                        </button>
+                        <switch width="1" alignment="left" value="YES" title="データをデバイスに保存" id="A9Y-uV-Y9b">
+                            <connections>
+                                <action selector="storeSummaryDataSwitchChanged:" destination="hgR-vi-RiA" id="79G-JT-QTc"/>
+                            </connections>
+                        </switch>
+                        <label alignment="left" text="JINS MEMEを管理" id="mBd-UL-y4S"/>
+                        <label alignment="left" text="アクティベート" id="Lam-W3-BGd">
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </label>
+                        <label alignment="left" text="接続状況" id="PAW-Hk-Vxv">
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </label>
+                        <label alignment="left" text="状態" id="gma-uT-Zgc">
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </label>
+                        <label alignment="left" text="SDKバージョン" id="Q2o-PW-6Ej">
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </label>
+                        <label alignment="left" text="FWバージョン" id="cLo-oK-l9J">
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </label>
+                        <label alignment="left" text="HWバージョン" id="jJd-2I-dMw">
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </label>
+                        <label alignment="left" text="モデルナンバー" id="WX1-DG-SWA">
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </label>
+                        <label alignment="left" text="サブカテゴリ" id="BLJ-0a-QUn">
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="activateButton" destination="sav-vn-1Bu" id="oD6-XX-hrP"/>
+                        <outlet property="activateLabel" destination="Lam-W3-BGd" id="kUG-lv-f8B"/>
+                        <outlet property="connectionStatusLabel" destination="PAW-Hk-Vxv" id="De0-7h-WQ7"/>
+                        <outlet property="dataHeaderLabel" destination="sab-Xq-mHV" id="PQa-tG-x6l"/>
+                        <outlet property="dataNumHeaderLabel" destination="KMo-Q9-Gw1" id="ilL-yw-Vp0"/>
+                        <outlet property="dataNumLabel" destination="ewG-B5-FTx" id="XZX-Le-WGN"/>
+                        <outlet property="deviceNameLabel" destination="U1Q-Js-ugi" id="0UB-kh-1ue"/>
+                        <outlet property="disconnectButton" destination="0rM-O8-b7E" id="0Ja-gt-NXg"/>
+                        <outlet property="enableGyroButton" destination="fff-Ez-CyW" id="gHU-Tw-4Rf"/>
+                        <outlet property="fwVersionLabel" destination="cLo-oK-l9J" id="BvD-Zw-2aa"/>
+                        <outlet property="gyroStatusLabel" destination="gma-uT-Zgc" id="FF5-yl-Vf2"/>
+                        <outlet property="hwVersionLabel" destination="jJd-2I-dMw" id="IyC-zM-aZi"/>
+                        <outlet property="manageHeaderLabel" destination="mBd-UL-y4S" id="nvc-jm-VP0"/>
+                        <outlet property="modelNumberLabel" destination="WX1-DG-SWA" id="3dp-TM-eJ8"/>
+                        <outlet property="sdkVersionLabel" destination="Q2o-PW-6Ej" id="JvU-MV-OW1"/>
+                        <outlet property="storeSummaryDataSwitch" destination="A9Y-uV-Y9b" id="onp-yp-hOl"/>
+                        <outlet property="subCategoryLabel" destination="BLJ-0a-QUn" id="E3N-ax-mK6"/>
+                        <outlet property="subscribeButton" destination="QdR-xf-JM6" id="VGl-BT-Sz9"/>
+                        <outlet property="tableView" destination="qgv-GS-Qe7" id="lt1-nV-bV8"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="129" y="90"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,11 @@
+framework module JinsMemeDevice {
+  umbrella header "JinsMemeDevice.h"
+
+  export *
+  module * { export * }
+}
+
+module JinsMemeDevice.Swift {
+    header "JinsMemeDevice-Swift.h"
+    requires objc
+}

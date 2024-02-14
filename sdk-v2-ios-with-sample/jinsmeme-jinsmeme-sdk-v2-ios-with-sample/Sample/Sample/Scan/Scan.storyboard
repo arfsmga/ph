@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dxH-6o-5Er">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--JINS MEMEを検索-->
+        <scene sceneID="KTr-Rl-Gee">
+            <objects>
+                <viewController id="dxH-6o-5Er" customClass="ScanViewController" customModule="JinsMemeDevice_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zjM-e5-jZt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Una-R8-POS">
+                                <rect key="frame" x="0.0" y="64" width="375" height="543"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="88w-eu-yGH" customClass="ScanTableViewCell" customModule="JinsMemeDevice_Example" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="88w-eu-yGH" id="08O-Ju-mHE">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ZF-Uf-514">
+                                                    <rect key="frame" x="25" y="11.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KvJ-bC-M54">
+                                                    <rect key="frame" x="323" y="11.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="KvJ-bC-M54" secondAttribute="trailing" constant="10" id="1hR-Po-pLI"/>
+                                                <constraint firstItem="KvJ-bC-M54" firstAttribute="centerY" secondItem="08O-Ju-mHE" secondAttribute="centerY" id="3oK-V1-YoO"/>
+                                                <constraint firstItem="7ZF-Uf-514" firstAttribute="centerY" secondItem="08O-Ju-mHE" secondAttribute="centerY" id="80c-Es-BM4"/>
+                                                <constraint firstItem="7ZF-Uf-514" firstAttribute="leading" secondItem="08O-Ju-mHE" secondAttribute="leadingMargin" constant="10" id="PfA-lb-dNP"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="deviceNameLabel" destination="7ZF-Uf-514" id="HqF-93-ygA"/>
+                                            <outlet property="rssiLabel" destination="KvJ-bC-M54" id="bSa-ea-RcZ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="dxH-6o-5Er" id="u1s-8g-ZFH"/>
+                                    <outlet property="delegate" destination="dxH-6o-5Er" id="bCN-gv-XYI"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLm-Gl-8uH">
+                                <rect key="frame" x="10" y="617" width="355" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Ic2-kv-qsK"/>
+                                </constraints>
+                                <state key="normal" title="検索開始">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startScanDidPush:" destination="dxH-6o-5Er" eventType="touchUpInside" id="xcC-ui-UqR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Una-R8-POS" firstAttribute="leading" secondItem="J48-Nf-aOw" secondAttribute="leading" id="0BB-CD-U38"/>
+                            <constraint firstItem="J48-Nf-aOw" firstAttribute="trailing" secondItem="wLm-Gl-8uH" secondAttribute="trailing" constant="10" id="8Gk-Vp-mvs"/>
+                            <constraint firstItem="J48-Nf-aOw" firstAttribute="bottom" secondItem="wLm-Gl-8uH" secondAttribute="bottom" constant="10" id="Gs4-Yp-kME"/>
+                            <constraint firstItem="Una-R8-POS" firstAttribute="trailing" secondItem="J48-Nf-aOw" secondAttribute="trailing" id="Jia-0b-Hn0"/>
+                            <constraint firstItem="wLm-Gl-8uH" firstAttribute="leading" secondItem="J48-Nf-aOw" secondAttribute="leading" constant="10" id="KN1-Vn-H6k"/>
+                            <constraint firstItem="Una-R8-POS" firstAttribute="top" secondItem="J48-Nf-aOw" secondAttribute="top" id="yUM-iY-ma8"/>
+                            <constraint firstItem="wLm-Gl-8uH" firstAttribute="top" secondItem="Una-R8-POS" secondAttribute="bottom" constant="10" id="ylo-M8-d7A"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="J48-Nf-aOw"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="JINS MEMEを検索" id="hu3-qd-esn">
+                        <barButtonItem key="leftBarButtonItem" title="閉じる" id="Hue-EP-Kdr">
+                            <connections>
+                                <action selector="closeButtonDidPush:" destination="dxH-6o-5Er" id="U2F-Af-MJ2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="startScanButton" destination="wLm-Gl-8uH" id="RfN-uN-510"/>
+                        <outlet property="tableView" destination="Una-R8-POS" id="Yna-YG-zk5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vgT-ui-4nm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-463.19999999999999" y="209.14542728635683"/>
+        </scene>
+    </scenes>
+</document>

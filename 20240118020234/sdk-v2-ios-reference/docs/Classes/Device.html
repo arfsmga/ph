@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Device Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/Device" class="dashAnchor"></a>
+    <a title="Device Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">JinsMemeDevice Docs</a> (97% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">JinsMemeDevice Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Device Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/ConnectionObserver.html">ConnectionObserver</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Device.html">Device</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DeviceCentral.html">DeviceCentral</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DeviceSDK.html">DeviceSDK</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MeasuredDataObserver.html">MeasuredDataObserver</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ScanObserver.html">ScanObserver</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/StatusObserver.html">StatusObserver</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/BluetoothUnavailbleError.html">BluetoothUnavailbleError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ConnectionStatus.html">ConnectionStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/DeviceRSSI.html">DeviceRSSI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/DeviceStatus.html">DeviceStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ScanResponse.html">ScanResponse</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/DeviceInfo.html">DeviceInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/FirmwareVersion.html">FirmwareVersion</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MeasuredData.html">MeasuredData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MeasuredData/Current.html">– Current</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MeasuredData/Summary.html">– Summary</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Device</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Device</span></code></pre>
+
+                </div>
+              </div>
+            <p>個別のJINS MEMEのデバイスを表します。JINS MEMEからデータを取得するために使用します。</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14JinsMemeDevice0C0C11isConnectedSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isConnected" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14JinsMemeDevice0C0C11isConnectedSbvp">isConnected</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>現在このデバイスが接続されているかどうかを返します。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isConnected</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14JinsMemeDevice0C0C11isActivatedSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isActivated" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14JinsMemeDevice0C0C11isActivatedSbvp">isActivated</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>現在このデバイスがアプリで使える状態かどうかを返します。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isActivated</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14JinsMemeDevice0C0C10peripheralSo12CBPeripheralCSgvp"></a>
+                    <a name="//apple_ref/swift/Property/peripheral" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14JinsMemeDevice0C0C10peripheralSo12CBPeripheralCSgvp">peripheral</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>このデバイスのCBPeripheralを返します。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">peripheral</span><span class="p">:</span> <span class="kt">CBPeripheral</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14JinsMemeDevice0C0C10deviceInfoAA0cE0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/deviceInfo" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14JinsMemeDevice0C0C10deviceInfoAA0cE0VSgvp">deviceInfo</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>デバイスの情報を返します。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">deviceInfo</span><span class="p">:</span> <span class="kt"><a href="../Structs/DeviceInfo.html">DeviceInfo</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14JinsMemeDevice0C0C8activateyyF"></a>
+                    <a name="//apple_ref/swift/Method/activate()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14JinsMemeDevice0C0C8activateyyF">activate()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>デバイスをアプリで使える状態にします。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">activate</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14JinsMemeDevice0C0C10deactivateyyF"></a>
+                    <a name="//apple_ref/swift/Method/deactivate()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14JinsMemeDevice0C0C10deactivateyyF">deactivate()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>デバイスをアプリで使えない状態にします。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">deactivate</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14JinsMemeDevice0C0C10disconnectyyF"></a>
+                    <a name="//apple_ref/swift/Method/disconnect()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14JinsMemeDevice0C0C10disconnectyyF">disconnect()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>デバイスを切断します。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">disconnect</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14JinsMemeDevice0C0C10enableGyroyyF"></a>
+                    <a name="//apple_ref/swift/Method/enableGyro()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14JinsMemeDevice0C0C10enableGyroyyF">enableGyro()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>デバイスのジャイロを有効にします。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">enableGyro</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+               <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14JinsMemeDevice0C0C9subscribe18connectionObserveryAA010ConnectionF0C_tF"></a>
+                    <a name="//apple_ref/swift/Method/subscribe(connectionObserver:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14JinsMemeDevice0C0C9subscribe18connectionObserveryAA010ConnectionF0C_tF">subscribe(connectionObserver:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>JINS MEMEの接続状況の変化を受け取ります。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">subscribe</span><span class="p">(</span><span class="nv">connectionObserver</span><span class="p">:</span> <span class="kt"><a href="../Classes/ConnectionObserver.html">ConnectionObserver</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>connectionObserver</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>接続状況の変化を受け取るオブザーバー</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14JinsMemeDevice0C0C11unsubscribe18connectionObserveryAA010ConnectionF0C_tF"></a>
+                    <a name="//apple_ref/swift/Method/unsubscribe(connectionObserver:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14JinsMemeDevice0C0C11unsubscribe18connectionObserveryAA010ConnectionF0C_tF">unsubscribe(connectionObserver:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>JINS MEMEの接続状況の変化を受け取ることを止めます。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">unsubscribe</span><span class="p">(</span><span class="nv">connectionObserver</span><span class="p">:</span> <span class="kt"><a href="../Classes/ConnectionObserver.html">ConnectionObserver</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>connectionObserver</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>接続状況の変化を受け取ることを止めるオブザーバー</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14JinsMemeDevice0C0C9subscribe18latestDataObserveryAA08MeasuredfG0C_tF"></a>
+                    <a name="//apple_ref/swift/Method/subscribe(latestDataObserver:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14JinsMemeDevice0C0C9subscribe18latestDataObserveryAA08MeasuredfG0C_tF">subscribe(latestDataObserver:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>JINS MEMEからのデータの更新を受け取ります。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">subscribe</span><span class="p">(</span><span class="nv">latestDataObserver</span><span class="p">:</span> <span class="kt"><a href="../Classes/MeasuredDataObserver.html">MeasuredDataObserver</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>latestDataObserver</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>データの更新を受け取るオブザーバー</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14JinsMemeDevice0C0C11unsubscribe18latestDataObserveryAA08MeasuredfG0C_tF"></a>
+                    <a name="//apple_ref/swift/Method/unsubscribe(latestDataObserver:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14JinsMemeDevice0C0C11unsubscribe18latestDataObserveryAA08MeasuredfG0C_tF">unsubscribe(latestDataObserver:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>JINS MEMEからのデータの更新を受け取ることを止めます。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">unsubscribe</span><span class="p">(</span><span class="nv">latestDataObserver</span><span class="p">:</span> <span class="kt"><a href="../Classes/MeasuredDataObserver.html">MeasuredDataObserver</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>latestDataObserver</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>データの更新を受け取ることを止めるオブザーバー</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14JinsMemeDevice0C0C9subscribe14statusObserveryAA06StatusF0C_tF"></a>
+                    <a name="//apple_ref/swift/Method/subscribe(statusObserver:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14JinsMemeDevice0C0C9subscribe14statusObserveryAA06StatusF0C_tF">subscribe(statusObserver:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>JINS MEMEの機器の状態の変化を受け取ります。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">subscribe</span><span class="p">(</span><span class="nv">statusObserver</span><span class="p">:</span> <span class="kt"><a href="../Classes/StatusObserver.html">StatusObserver</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>statusObserver</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>機器の状態の変化を受け取るオブザーバー</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:14JinsMemeDevice0C0C11unsubscribe14statusObserveryAA06StatusF0C_tF"></a>
+                    <a name="//apple_ref/swift/Method/unsubscribe(statusObserver:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:14JinsMemeDevice0C0C11unsubscribe14statusObserveryAA06StatusF0C_tF">unsubscribe(statusObserver:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>JINS MEMEの機器の状態の変化を受け取ることを止めます。</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">unsubscribe</span><span class="p">(</span><span class="nv">statusObserver</span><span class="p">:</span> <span class="kt"><a href="../Classes/StatusObserver.html">StatusObserver</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>statusObserver</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>機器の状態の変化を受け取ることを止めるオブザーバー</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://jins-meme.com" target="_blank" rel="external">JINS</a>. All rights reserved. (Last updated: 2019-11-29)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

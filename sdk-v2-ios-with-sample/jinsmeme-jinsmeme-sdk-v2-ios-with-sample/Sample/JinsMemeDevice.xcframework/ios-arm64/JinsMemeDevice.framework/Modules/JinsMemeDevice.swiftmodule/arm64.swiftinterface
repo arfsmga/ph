@@ -1,0 +1,180 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name JinsMemeDevice
+import CoreBluetooth
+import Foundation
+@_exported import JinsMemeDevice
+import Swift
+public enum DeviceStatus {
+  case gyroEnabled(Swift.Bool)
+  case processing
+}
+public class MeasuredDataObserver : Swift.Equatable {
+  public init(update: @escaping (JinsMemeDevice.MeasuredData) -> Swift.Void)
+  public static func == (lhs: JinsMemeDevice.MeasuredDataObserver, rhs: JinsMemeDevice.MeasuredDataObserver) -> Swift.Bool
+  @objc deinit
+}
+public class ConnectionObserver : Swift.Equatable {
+  public init(update: @escaping (JinsMemeDevice.ConnectionStatus) -> Swift.Void)
+  public static func == (lhs: JinsMemeDevice.ConnectionObserver, rhs: JinsMemeDevice.ConnectionObserver) -> Swift.Bool
+  @objc deinit
+}
+public struct FirmwareVersion {
+  public let revision: Swift.UInt8
+  public let minor: Swift.UInt8
+  public let major: Swift.UInt8
+}
+public class ScanObserver : Swift.Equatable {
+  public init(update: @escaping (JinsMemeDevice.ScanResponse) -> Swift.Void)
+  public static func == (lhs: JinsMemeDevice.ScanObserver, rhs: JinsMemeDevice.ScanObserver) -> Swift.Bool
+  @objc deinit
+}
+public class Device {
+  public var isConnected: Swift.Bool {
+    get
+  }
+  public var isActivated: Swift.Bool {
+    get
+  }
+  public var peripheral: CoreBluetooth.CBPeripheral? {
+    get
+  }
+  public var deviceInfo: JinsMemeDevice.DeviceInfo?
+  @objc deinit
+  public func activate()
+  public func deactivate()
+  public func disconnect()
+  public func enableGyro()
+  public func subscribe(connectionObserver: JinsMemeDevice.ConnectionObserver)
+  public func unsubscribe(connectionObserver: JinsMemeDevice.ConnectionObserver)
+  public func subscribe(latestDataObserver: JinsMemeDevice.MeasuredDataObserver)
+  public func unsubscribe(latestDataObserver: JinsMemeDevice.MeasuredDataObserver)
+  public func subscribe(statusObserver: JinsMemeDevice.StatusObserver)
+  public func unsubscribe(statusObserver: JinsMemeDevice.StatusObserver)
+}
+public struct DeviceInfo {
+  public let deviceType: Swift.Int
+  public let deviceSubType: Swift.Int
+  public let firmwareVersion: JinsMemeDevice.FirmwareVersion
+  public let hardwareVersion: Swift.Int
+  public let macAddress: Swift.String
+}
+public class StatusObserver : Swift.Equatable {
+  public init(update: @escaping (JinsMemeDevice.DeviceStatus) -> Swift.Void)
+  public static func == (lhs: JinsMemeDevice.StatusObserver, rhs: JinsMemeDevice.StatusObserver) -> Swift.Bool
+  @objc deinit
+}
+public enum ConnectionStatus {
+  case connected(JinsMemeDevice.Device)
+  case disconnected(JinsMemeDevice.Device)
+  case error(JinsMemeDevice.Device, Swift.Error?)
+}
+public enum ScanResponse {
+  case discovered(JinsMemeDevice.Device, JinsMemeDevice.DeviceRSSI)
+  case error(Swift.Error?)
+}
+public class DeviceCentral {
+  public init()
+  @objc deinit
+  public func startScan()
+  public func stopScan()
+  public func subscribe(scanObserver: JinsMemeDevice.ScanObserver)
+  public func unsubscribe(scanObserver: JinsMemeDevice.ScanObserver)
+}
+public enum BluetoothUnavailbleError : Swift.Error {
+  case unsupported
+  case unauthorized
+  case poweredOff
+  public static func == (a: JinsMemeDevice.BluetoothUnavailbleError, b: JinsMemeDevice.BluetoothUnavailbleError) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public struct MeasuredData {
+  public struct Current {
+    public let eyeMoveUp: Swift.Int
+    public let eyeMoveDown: Swift.Int
+    public let eyeMoveLeft: Swift.Int
+    public let eyeMoveRight: Swift.Int
+    public let blinkSpeed: Swift.Int
+    public let blinkStrength: Swift.Int
+    public let walking: Swift.Bool
+    public let roll: Swift.Double
+    public let pitch: Swift.Double
+    public let yaw: Swift.Double
+    public let accX: Swift.Double
+    public let accY: Swift.Double
+    public let accZ: Swift.Double
+    public let noiseStatus: Swift.Bool
+    public let fitError: Swift.Int
+    public let powerLeft: Swift.Int
+    public let sequenceNumber: Swift.Int
+  }
+  public struct Summary {
+    public let capturedAt: Foundation.Date
+    public let validDuration: Swift.Int
+    public let noiseDuration: Swift.Double
+    public let fitDuration: Swift.Int
+    public let walkingDuration: Swift.Int
+    public let powerLeft: Swift.Int
+    public let eyeMoveHorizontal: Swift.Double
+    public let eyeMoveVertical: Swift.Double
+    public let eyeMoveBigHorizontal: Swift.Double
+    public let eyeMoveBigVertical: Swift.Double
+    public let headMoveVerticalCount: Swift.Int
+    public let headMoveHorizontalCount: Swift.Int
+    public let walkingVibrationRightX: Swift.Double
+    public let walkingVibrationLeftX: Swift.Double
+    public let walkingVibrationRightY: Swift.Double
+    public let walkingVibrationLeftY: Swift.Double
+    public let walkingVibrationRightZ: Swift.Double
+    public let walkingVibrationLeftZ: Swift.Double
+    public let landingStrengthRightMaxAvg: Swift.Double
+    public let landingStrengthLeftMaxAvg: Swift.Double
+    public let slopeXAvg: Swift.Double
+    public let slopeYAvg: Swift.Double
+    public let slopeXStd: Swift.Double
+    public let slopeYStd: Swift.Double
+    public let highSpeedStepsNum: Swift.Int
+    public let middleSpeedStepsNum: Swift.Int
+    public let lowSpeedStepsNum: Swift.Int
+    public let ultraLowSpeedStepsNum: Swift.Int
+    public let nptAvgWeak: Swift.Double
+    public let weakBlinkSpeedAvg: Swift.Double
+    public let weakBlinkSpeedStd: Swift.Double
+    public let weakBlinkStrengthAvg: Swift.Double
+    public let weakBlinkStrengthStd: Swift.Double
+    public let weakBlinkCount: Swift.Int
+    public let weakBlinkSwarmCount: Swift.Int
+    public let weakBlinkIntervalAvg: Swift.Double
+    public let weakBlinkIntervalCount: Swift.Int
+    public let nptAvgStrong: Swift.Double
+    public let strongBlinkSpeedAvg: Swift.Double
+    public let strongBlinkSpeedStd: Swift.Double
+    public let strongBlinkStrengthAvg: Swift.Double
+    public let strongBlinkStrengthStd: Swift.Double
+    public let strongBlinkCount: Swift.Int
+    public let strongBlinkSwarmCount: Swift.Int
+    public let strongBlinkIntervalAvg: Swift.Double
+    public let strongBlinkIntervalCount: Swift.Int
+  }
+  public let current: JinsMemeDevice.MeasuredData.Current?
+  public let summary: JinsMemeDevice.MeasuredData.Summary?
+}
+extension MeasuredData.Summary : Swift.Equatable {
+  public static func == (lhs: JinsMemeDevice.MeasuredData.Summary, rhs: JinsMemeDevice.MeasuredData.Summary) -> Swift.Bool
+}
+extension MeasuredData.Current : Swift.Equatable {
+  public static func == (lhs: JinsMemeDevice.MeasuredData.Current, rhs: JinsMemeDevice.MeasuredData.Current) -> Swift.Bool
+}
+public class DeviceSDK {
+  public static func version() -> Swift.String
+  @objc deinit
+}
+public enum DeviceRSSI {
+  case available(Swift.Int)
+  case unavailable
+}
+extension JinsMemeDevice.BluetoothUnavailbleError : Swift.Equatable {}
+extension JinsMemeDevice.BluetoothUnavailbleError : Swift.Hashable {}
